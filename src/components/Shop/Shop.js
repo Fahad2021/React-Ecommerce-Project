@@ -4,6 +4,7 @@ import './Shop.css'
 import Produt from '../Product/Produt';
 import Cart from '../Cart/Cart';
 
+
 const Shop = () => {
     const first10=fakeData.slice(0,10);
     const[prod,setProd]=useState(first10);
@@ -19,7 +20,8 @@ const Shop = () => {
             <div className='product-container'>
             
                 {
-                    prod.map(pd=><Produt 
+                    prod.map(pd=><Produt
+                        showAddToCart={true} 
                         handleAddProduct={handleAddProduct}
                         product={pd}></Produt>)
                 }
